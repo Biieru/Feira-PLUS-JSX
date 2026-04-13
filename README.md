@@ -63,7 +63,7 @@ npm install
 npm run dev
 ```
 
-## 📱 Converter para APK (Android)
+## Converter para APK (Android)
 
 O app pode ser convertido para APK usando **Capacitor**:
 
