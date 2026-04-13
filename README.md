@@ -1,62 +1,29 @@
 # Feira Plus+
 
-**Sua lista de compras inteligente para atacados.**
+Lista de compras por corredor para **Novo Atacarejo**, **Assaí** e **Atacadão**. Interface simples (tema escuro, tipos grandes), pensada em acessibilidade.
 
-Aplicativo focado em organizar sua lista de compras com base nos corredores do atacado que você está visitando. Desenvolvido pensando em acessibilidade e simplicidade para todos os públicos, especialmente pessoas 60+.
+**Em resumo:** escolhe o mercado, digita os itens (o app interpreta quantidade e unidade), organiza por corredor, permite marcar o que já pegou, exportar em **TXT** ou **JPG** e ajustar corredores e palavras-chave por loja.
 
----
+## Stack
 
-## Funcionalidades
+React (JSX), Vite, Capacitor (Android). **Android Gradle Plugin 8.1.2.** Persistência via `localStorage` no bundle web; no host Cursor use `window.storage` se existir.
 
-- **Seleção de mercado** — Escolha entre Novo Atacarejo, Assaí Atacadista ou Atacadão antes de montar sua lista
-- **Organização automática por corredor** — Itens são reordenados automaticamente conforme a disposição dos corredores do mercado selecionado
-- **Formatação inteligente de itens** — Escreva de qualquer jeito (ex: `feijão carioca 2kg`, `3 leite`, `2 pacotes arroz`) e o app padroniza para `2kg - Feijão Carioca`, `3Un - Leite`, `2Pct - Arroz`
-- **Sugestões baseadas no histórico** — O app aprende o que você costuma comprar e sugere itens conforme você digita
-- **Marcador "Mais em conta"** — Checkbox com ícone verde (💲) para sinalizar que a marca não importa, só o melhor preço
-- **Checkbox de progresso** — Risque itens à medida que coloca no carrinho
-- **Exportação em TXT e Imagem** — Gere sua lista formatada para imprimir ou compartilhar
-- **Configuração de corredores** — Personalize os corredores e palavras-chave de cada mercado
-- **Dados persistentes** — Histórico e configurações são salvos entre sessões
-- **Animações Matrix** — Transições de tela com efeito digital rain inspirado no filme Matrix
-- **Interface acessível** — Fontes grandes, botões amplos, alto contraste (tema escuro)
+## Rodar e gerar APK
 
-## Mercados Suportados
+```bash
+npm install
+npm run dev          # desenvolvimento
+npm run build
+npx cap sync android
+npx cap open android # Build → APK no Android Studio
+```
 
-| Mercado | Corredores Padrão | Personalizável |
-|---|---|---|
-| Novo Atacarejo | 8 corredores | SIM |
-| Assaí Atacadista | 8 corredores | SIM |
-| Atacadão | 8 corredores | SIM |
-
-> Os corredores vêm pré-configurados com palavras-chave genéricas. O usuário deve personalizar conforme a unidade que frequenta.
-
-## Como Usar
-
-1. Abra o app e selecione o mercado que vai visitar
-2. Digite os itens no campo de busca (ex: `2kg Feijão Carioca`)
-3. Ative o marcador **"Mais em conta"** se quiser a opção mais barata
-4. Os itens serão organizados automaticamente por corredor
-5. No mercado, marque os itens conforme coloca no carrinho
-6. Exporte a lista em TXT ou imagem para compartilhar
-
-## Tecnologias
-
-- **React** (JSX)
-- **JavaScript ES6+**
-- **CSS-in-JS** (inline styles)
-- **Canvas API** (animação Matrix)
-- **Storage API** (persistência de dados)
+Arquivo principal: `Feira PLUS+.jsx`. Entrada web: `src/main.jsx`. Logos dos mercados: `public/brands/`. Ícone do app / splash: `public/app-icon.png` e recursos em `android/app/src/main/res/`.
 
 ## Licença
 
-Este projeto está sob a licença PolyForm Noncommercial 1.0.0 — uso comercial não é permitido sem autorização do autor. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+[PolyForm Noncommercial 1.0.0](LICENSE) — sem uso comercial sem autorização.
 
 ## Autor
 
-Criado por **[@Bordercansado](https://github.com/Biieru)**
-
----
-
-<p align="center">
-  <strong>Feira Plus+</strong> — Fazendo sua feira render mais.
-</p>
+[@Bordercansado](https://github.com/Biieru)
