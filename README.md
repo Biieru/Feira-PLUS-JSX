@@ -51,7 +51,7 @@ Aplicativo focado em organizar sua lista de compras com base nos corredores do a
 
 ```bash
 # Clone o repositório
-git clone https://github.com/Bordercansado/feira-plus.git
+git clone https://github.com/Biieru/feira-plus.git
 
 # Entre na pasta
 cd feira-plus
@@ -120,7 +120,7 @@ Este projeto está sob a licença PolyForm Noncommercial 1.0.0 — uso comercial
 
 ## Autor
 
-Criado por **@Bordercansado**
+Criado por **[@Bordercansado](https://github.com/Biieru)**
 
 ---
 
